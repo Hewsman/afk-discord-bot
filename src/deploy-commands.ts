@@ -26,8 +26,13 @@ const commands = [
   new SlashCommandBuilder()
     .setName("sali-bebu")
     .setDescription("Join your current voice channel"),
+
+  new SlashCommandBuilder().setName("afk").setDescription("set yourself afk."),
+  new SlashCommandBuilder().setName("not-afk").setDescription("remove afk."),
+
+  // context menu commands
   new ContextMenuCommandBuilder()
-    .setName("AFK")
+    .setName("afk")
     .setType(ApplicationCommandType.User),
 ].map((command) => command.toJSON());
 
